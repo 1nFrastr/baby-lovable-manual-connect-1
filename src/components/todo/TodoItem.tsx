@@ -10,6 +10,21 @@ type Props = {
   onEdit: (id: string, text: string) => void;
 };
 
+const palette = [
+  "from-fuchsia-500 to-pink-500",
+  "from-orange-400 to-amber-500",
+  "from-sky-500 to-cyan-500",
+  "from-emerald-400 to-teal-500",
+  "from-indigo-500 to-violet-500",
+  "from-rose-500 to-red-500",
+];
+
+function colorFor(id: string) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return palette[Math.abs(h) % palette.length];
+}
+
 export function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(todo.text);

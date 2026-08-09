@@ -32,8 +32,10 @@ export function TodoApp() {
   return (
     <section className="flex w-full max-w-xl flex-col gap-5">
       <header className="text-center">
-        <h1 className="text-2xl font-semibold tracking-tight">Todos</h1>
-        <p className="mt-1 text-sm text-foreground/60">
+        <h1 className="bg-gradient-to-r from-fuchsia-500 via-orange-400 to-sky-500 bg-clip-text text-3xl font-bold tracking-tight text-transparent dark:from-fuchsia-400 dark:via-orange-300 dark:to-sky-400">
+          Todos
+        </h1>
+        <p className="mt-1 text-sm text-foreground/70">
           Tiny list. Big plans.
         </p>
       </header>
