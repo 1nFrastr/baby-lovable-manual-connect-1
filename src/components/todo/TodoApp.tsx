@@ -34,7 +34,7 @@ export function TodoApp() {
       <header className="text-center">
         <h1 className="text-2xl font-semibold tracking-tight">Todos</h1>
         <p className="mt-1 text-sm text-foreground/60">
-          Simple tasks, saved locally.
+          Tiny list. Big plans.
         </p>
       </header>
 
