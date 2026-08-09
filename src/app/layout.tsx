@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "baby-lovable app",
-  description: "A Next.js app generated with baby-lovable",
+  title: "Todos",
+  description: "A simple todo list",
 };
 
 export default function RootLayout({
