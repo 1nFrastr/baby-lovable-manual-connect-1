@@ -1,5 +1,6 @@
 "use client";
 
+import { FilterX, ListTodo } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { createId, loadTodos, saveTodos, type Todo } from "@/lib/todos";
 import { TodoInput } from "./TodoInput";
@@ -59,9 +60,17 @@ export function TodoApp() {
 
       {visible.length === 0 ? (
         <div className="rounded-lg border border-dashed border-foreground/15 py-12 text-center text-sm text-foreground/50">
-          {hydrated && todos.length === 0
-            ? "Nothing here yet. Add your first task above."
-            : "No tasks match this filter."}
+          {hydrated && todos.length === 0 ? (
+            <>
+              <ListTodo className="mx-auto mb-2 h-8 w-8 text-foreground/30" aria-hidden />
+              Nothing here yet. Add your first task above.
+            </>
+          ) : (
+            <>
+              <FilterX className="mx-auto mb-2 h-8 w-8 text-foreground/30" aria-hidden />
+              No tasks match this filter.
+            </>
+          )}
         </div>
       ) : (
         <ul className="flex flex-col gap-2">

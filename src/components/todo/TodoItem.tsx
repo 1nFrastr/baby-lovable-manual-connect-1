@@ -1,5 +1,6 @@
 "use client";
 
+import { Check, Pencil, Trash2 } from "lucide-react";
 import { useState } from "react";
 import type { Todo } from "@/lib/todos";
 
@@ -51,18 +52,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
         }`}
       >
         {todo.done && (
-          <svg
-            viewBox="0 0 16 16"
-            className="h-3.5 w-3.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-          >
-            <path d="M3 8.5l3.5 3.5L13 4" />
-          </svg>
+          <Check className="h-3.5 w-3.5" strokeWidth={2.5} aria-hidden />
         )}
       </button>
 
@@ -101,9 +91,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
           aria-label="Edit todo"
           className="rounded p-1.5 text-foreground/60 transition hover:bg-foreground/5 hover:text-foreground"
         >
-          <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
-            <path d="M13.586 2.586a2 2 0 0 1 2.828 0l1 1a2 2 0 0 1 0 2.828l-9.193 9.193a1 1 0 0 1-.45.257l-3.5.875a.5.5 0 0 1-.61-.61l.875-3.5a1 1 0 0 1 .257-.45l9.193-9.193Z" />
-          </svg>
+          <Pencil className="h-4 w-4" aria-hidden />
         </button>
         <button
           type="button"
@@ -111,13 +99,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: Props) {
           aria-label="Delete todo"
           className="rounded p-1.5 text-foreground/60 transition hover:bg-red-500/10 hover:text-red-500"
         >
-          <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden>
-            <path
-              fillRule="evenodd"
-              d="M8.75 1A2.75 2.75 0 0 0 6 3.75v.443c-.795.077-1.58.182-2.358.327a.75.75 0 1 0 .298 1.47l.084-.017 1.107 12.225A2.25 2.25 0 0 0 7.376 20h5.248a2.25 2.25 0 0 0 2.245-2.102l1.107-12.224.084.017a.75.75 0 0 0 .298-1.47A41.04 41.04 0 0 0 14 4.193V3.75A2.75 2.75 0 0 0 11.25 1h-2.5ZM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4ZM8.58 7.72a.75.75 0 0 0-1.5.06l.3 7.5a.75.75 0 1 0 1.5-.06l-.3-7.5Zm4.34.06a.75.75 0 1 0-1.5-.06l-.3 7.5a.75.75 0 1 0 1.5.06l.3-7.5Z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <Trash2 className="h-4 w-4" aria-hidden />
         </button>
       </div>
     </li>
